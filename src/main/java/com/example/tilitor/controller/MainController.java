@@ -1,4 +1,4 @@
-package com.example.tilitor;
+package com.example.tilitor.controller;
 
 import com.example.tilitor.domain.Message;
 import com.example.tilitor.repos.MessageRepo;
@@ -11,18 +11,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.Map;
 
 @Controller
-public class GreetingController {
+public class MainController {
 
     @Autowired
     private MessageRepo messageRepo;
 
-    @GetMapping("/greeting")
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Map<String, Object> model) {
-        model.put("name", name);
+    @GetMapping("/")
+    public String greeting(Map<String, Object> model) {
         return "greeting";
     }
 
-    @GetMapping
+    @GetMapping("/main")
     public String main(Map<String, Object> model) {
         Iterable<Message> messages = messageRepo.findAll();
 
@@ -30,7 +29,7 @@ public class GreetingController {
         return "main";
     }
 
-    @PostMapping
+    @PostMapping("/main")
     public String addMessage(
             @RequestParam String text,
             @RequestParam String tag,

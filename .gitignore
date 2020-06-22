@@ -110,3 +110,5 @@ hs_err_pid*
 Будет удалено target/classes/templates/
 Будет удалено target/generated-sources/
 Будет удалено tilitor.iml
+/target/
+/.idea/
