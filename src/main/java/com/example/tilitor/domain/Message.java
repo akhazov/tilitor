@@ -35,35 +35,35 @@ public class Message {
         return author != null ? author.getUsername() : "<none>";
     }
 
-    Long getId() {
+    public Long getId() {
         return id;
     }
 
-    void setId(Long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    String getText() {
+    public String getText() {
         return text;
     }
 
-    void setText(String text) {
+    public void setText(String text) {
         this.text = text;
     }
 
-    String getTag() {
+    public String getTag() {
         return tag;
     }
 
-    void setTag(String tag) {
+    public void setTag(String tag) {
         this.tag = tag;
     }
 
-    User getAuthor() {
+    public User getAuthor() {
         return author;
     }
 
-    void setAuthor(User author) {
+    public void setAuthor(User author) {
         this.author = author;
     }
 }
